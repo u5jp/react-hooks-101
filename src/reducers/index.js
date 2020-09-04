@@ -32,10 +32,6 @@
 //    }
 //]
 
-
-
-
-
 const events = (state = [], action) => {
   switch(action.type){
     case 'CREATE_EVENT':
@@ -45,7 +41,7 @@ const events = (state = [], action) => {
       return [...state, {id,...event}]
     case 'DELETE_EVENT':
       return state.filter(event => event.id !== action.id)
-    case 'CREATE_ALL_EVENTS':
+    case 'DELETE_ALL_EVENTS':
       return []
     default:
       return state
